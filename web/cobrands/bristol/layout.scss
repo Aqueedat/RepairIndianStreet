@@ -1,3 +1,82 @@
 @import "_colours";
 @import "../sass/layout";
 @import "../sass/report_list_pins";
+
+#site-header {
+  background-color: $g1;
+  background: $g1;
+}
+
+// Don't display a border atop the page
+.nav-wrapper .nav-wrapper-2 {
+  border-top: none;
+}
+
+body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
+  // Display the BCC logo and header correctly
+  #site-logo {
+    background: url(/cobrands/bristol/bcclogo.png) 0 14px no-repeat;
+    background-size: 81px 81px;
+    text-indent: 122px;
+    height: 111px;
+    line-height: 111px;
+    font-size: 1.75em;
+    font-weight: bold;
+    // Getting rid of absolute positioning allows us to style the BCC nav below nicely
+    position: static;
+  }
+  // Make sure the header is only as tall as it needs to be
+  #site-header {
+    height: initial;
+    .container {
+      min-height: auto;
+    }
+  }
+
+  #front-main {
+    background-color: $g7;
+  }
+
+  // Put the main FMS navigation below the Bristol header
+  .nav-menu {
+    float: left;
+    margin-top: 5em;
+  }
+
+  // Reveal the BCC nav
+  .container--bcc {
+    display: block;
+    width: 100%;
+    border-top: 5px solid #40444b;
+    border-bottom: 5px solid $bcc_red;
+
+    ul {
+      width: 60em;
+      margin: 0 auto;
+      li {
+        list-style: none;
+        display: inline-flex;
+        margin: -5px 0;
+        a {
+          background-color: $g1;
+          margin: 0;
+          padding: 1.25em;
+          border-top: 5px solid #40444b;
+          border-bottom: 5px solid $bcc_red;
+          color: white;
+          &.selected, &.selected:hover {
+            background-color: white;
+            border-top-color: $bcc_red;
+            border-bottom-color: white;
+            color: black;
+          }
+          &:hover {
+            background-color: #40444b;
+            border-bottom-color: #40444b;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
