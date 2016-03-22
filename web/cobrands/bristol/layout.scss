@@ -13,7 +13,7 @@
   border-top: none;
 }
 
-body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
+body.frontpage, body.twothirdswidthpage, body.fullwidthpage, body.authpage {
   // Display the BCC logo and header correctly
   #site-logo {
     background: url(/cobrands/bristol/bcclogo.png) 0 14px no-repeat;
@@ -37,10 +37,25 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
 
     &:after {
       content: " ";
-      height: 3em;
+      height: 3.5em;
       display: block;
       border-bottom: solid 5px $g6;
       background-color: white;
+    }
+  }
+
+  // We have to override a lot of rules here to make the appearance
+  // of the logged-in UI consistent across pages
+  #user-meta p {
+    top: -7em;
+    left: auto;
+    right: 0;
+    color: $bcc_red;
+    background: none;
+    box-shadow: none;
+    a {
+      background: white;
+      color: $g1;
     }
   }
 
@@ -48,17 +63,62 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
     background-color: white;
   }
 
-  // Put the main FMS navigation below the Bristol header
   .nav-menu {
+    // Put the main FMS navigation below the Bristol header
     float: left;
     width: 100%;
-    margin-top: 11.5em;
+    margin-top: 11.75em;
+
+    li.bcc-extra {
+      display: block;
+
+      a {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &::after {
+        padding-right: 5px;
+        padding-left: 5px;
+        color: #ccc;
+        content: "\e613";
+        font-family: 'bcc';
+        speak: none;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        display: inline-block;
+      }
+    }
+
+    a, span {
+      display: inline-block; // So the chevrons appear correctly
+      color: $b3;
+      font-size: 1.2em;
+    }
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        background: transparent;
+        color: $g1;
+      }
+    }
+  }
+
+  // Stop the 'report a problem' button being red on non-map pages
+  .nav-menu--main a.report-a-problem-btn {
+    background-color: transparent;
   }
 
   // Stop .nav-wrapper from preventing the logo being clicked
   .nav-wrapper .nav-wrapper-2 {
     height: 0;
     min-height: 0;
+  }
+
+  // Put FAQ side nav at correct vertical position
+  .content .sticky-sidebar aside {
+    top: 19em;
   }
 
   // Reveal the BCC nav
@@ -104,5 +164,28 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
         }
       }
     }
+  }
+}
+
+body.mappage {
+  // Stop the header being too tall
+  #site-header {
+    min-height: 64px;
+
+    .container {
+      min-height: 0;
+    }
+  }
+
+  a.report-a-problem-btn {
+    color: white;
+  }
+
+  .nav-menu--main span {
+    color: white;
+  }
+
+  .nav-menu li.bcc-extra {
+    display: none;
   }
 }

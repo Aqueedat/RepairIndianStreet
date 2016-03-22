@@ -55,6 +55,20 @@
     font-style: normal;
 }
 
+@font-face {
+    // Family Name
+    font-family: 'bcc';
+    // IE9 Compatibility Mode
+    src: url('fonts/icomoon/bcc.eot');
+    // Various Browsers
+    src: url('fonts/icomoon/bcc.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/icomoon/bcc.woff') format('woff'), /* Modern Browsers */
+         url('fonts/icomoon/bcc.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/icomoon/bcc.svg#TheSans_LP_400_SemiLight') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
 $heading-font: "Thesans-Bold", "Helvetica Neue", Helvetica, sans-serif;
 $body-font: "Thesans-Semi-Light", "Helvetica Neue", Helvetica, sans-serif;
 $meta-font: "Thesans-Semi-Light", "Helvetica Neue", Helvetica, sans-serif;

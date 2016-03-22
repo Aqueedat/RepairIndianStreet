@@ -5,11 +5,6 @@
 
 @import "../sass/base";
 
-// Hide the mySociety logo from the nav menu
-.nav-menu--mysoc {
-  display: none;
-}
-
 // Put the BCC logo in place, and reveal the 'bristol.gov.uk' text alongside it
 #site-logo {
   background: url(/cobrands/bristol/bcclogo.png) 0 0 no-repeat;
@@ -25,5 +20,8 @@
 
 // Hide the BCC nav on mobile
 .container--bcc {
+  display: none;
+}
+.nav-menu li.bcc-extra {
   display: none;
 }
