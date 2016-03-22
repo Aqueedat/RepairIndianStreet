@@ -1,4 +1,5 @@
 @import "_colours";
+@import "_fonts";
 @import "../sass/layout";
 @import "../sass/report_list_pins";
 
@@ -20,11 +21,12 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
     text-indent: 122px;
     height: 111px;
     line-height: 111px;
-    font-size: 1.75em;
+    font-size: 30px;
     font-weight: bold;
     // Getting rid of absolute positioning allows us to style the BCC nav below nicely
     position: static;
   }
+
   // Make sure the header is only as tall as it needs to be
   #site-header {
     height: auto;
@@ -43,7 +45,7 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
   }
 
   #front-main {
-    background-color: $g7;
+    background-color: white;
   }
 
   // Put the main FMS navigation below the Bristol header
@@ -63,23 +65,29 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
     ul {
       width: 60em;
       margin: 0 auto;
+
       li {
         list-style: none;
         display: inline-flex;
         margin: -5px 0;
+        font-size: 19px;
+        font-family: "Thesans-Semi-Bold", "Helvetica Neue", Helvetica, sans-serif;
+
         a {
           background-color: $g1;
           margin: 0;
-          padding: 1.25em;
+          padding: 19px 15px;
           border-top: 5px solid #40444b;
           border-bottom: 5px solid $bcc_red;
           color: white;
+
           &.selected, &.selected:hover {
             background-color: white;
             border-top-color: $bcc_red;
             border-bottom-color: white;
             color: black;
           }
+
           &:hover {
             background-color: #40444b;
             border-bottom-color: #40444b;
