@@ -27,9 +27,18 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
   }
   // Make sure the header is only as tall as it needs to be
   #site-header {
-    height: initial;
+    height: auto;
+
     .container {
       min-height: auto;
+    }
+
+    &:after {
+      content: " ";
+      height: 3em;
+      display: block;
+      border-bottom: solid 5px $g6;
+      background-color: white;
     }
   }
 
@@ -40,7 +49,8 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
   // Put the main FMS navigation below the Bristol header
   .nav-menu {
     float: left;
-    margin-top: 5em;
+    width: 100%;
+    margin-top: 11.5em;
   }
 
   // Reveal the BCC nav
