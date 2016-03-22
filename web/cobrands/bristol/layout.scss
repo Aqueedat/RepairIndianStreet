@@ -32,7 +32,7 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
     height: auto;
 
     .container {
-      min-height: auto;
+      min-height: 0;
     }
 
     &:after {
@@ -55,6 +55,12 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
     margin-top: 11.5em;
   }
 
+  // Stop .nav-wrapper from preventing the logo being clicked
+  .nav-wrapper .nav-wrapper-2 {
+    height: 0;
+    min-height: 0;
+  }
+
   // Reveal the BCC nav
   .container--bcc {
     display: block;
@@ -68,7 +74,8 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
 
       li {
         list-style: none;
-        display: inline-flex;
+        display: block;
+        float: left;
         margin: -5px 0;
         font-size: 19px;
         font-family: "Thesans-Semi-Bold", "Helvetica Neue", Helvetica, sans-serif;
@@ -79,6 +86,7 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage {
           padding: 19px 15px;
           border-top: 5px solid #40444b;
           border-bottom: 5px solid $bcc_red;
+          display: block;
           color: white;
 
           &.selected, &.selected:hover {
