@@ -7,7 +7,7 @@
 
 // Put the BCC logo in place, and reveal the 'bristol.gov.uk' text alongside it
 #site-logo {
-  background: url(/cobrands/bristol/bcclogo.png) 0 0 no-repeat;
+  background: url(/cobrands/bristol/img/bcclogo.png) 0 0 no-repeat;
   background-size: 37px;
   text-indent: 47px;
   line-height: 37px;
@@ -24,4 +24,49 @@
 }
 .nav-menu li.bcc-extra {
   display: none;
+}
+
+// Style the Bristol footer correctly
+.bristol_footer {
+  background-color: $g1;
+  border-top: solid 5px $bcc_red;
+
+  footer {
+    margin: 0 auto;
+    padding: 1em 0;
+    max-width: 60em;
+    text-align: center;
+
+    #footer-logo, .footer-title {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    .legal-nav li {
+      padding: 0 1em;
+
+      &:after {
+      }
+    }
+
+    .footer-social-links li {
+      margin-right: 6px;
+      padding: 0;
+      background-color: black;
+      height: 42px;
+      width: 42px;
+    }
+
+    a, a:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
