@@ -10,7 +10,7 @@ sub council_name { return 'Bristol County Council'; }
 sub council_url { return 'bristol'; }
 
 sub example_places {
-    return ( 'BS1 5TR', "College Green" );
+    return ( 'BS1 5TR', "Broad Quay" );
 }
 
 sub disambiguate_location {
