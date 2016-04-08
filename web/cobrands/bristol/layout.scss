@@ -40,6 +40,7 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage, body.authpage {
       height: 3.5em;
       display: block;
       border-bottom: solid 5px $g6;
+      border-top: solid 5px $bcc_red;
       background-color: white;
     }
   }
@@ -67,7 +68,7 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage, body.authpage {
     // Put the main FMS navigation below the Bristol header
     float: left;
     width: 100%;
-    margin-top: 11.75em;
+    margin-top: 7.25em;
 
     li.bcc-extra {
       display: block;
@@ -119,51 +120,6 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage, body.authpage {
   // Put FAQ side nav at correct vertical position
   .content .sticky-sidebar aside {
     top: 19em;
-  }
-
-  // Reveal the BCC nav
-  .container--bcc {
-    display: block;
-    width: 100%;
-    border-top: 5px solid #40444b;
-    border-bottom: 5px solid $bcc_red;
-
-    ul {
-      width: 60em;
-      margin: 0 auto;
-
-      li {
-        list-style: none;
-        display: block;
-        float: left;
-        margin: -5px 0;
-        font-size: 19px;
-        font-family: "Thesans-Semi-Bold", "Helvetica Neue", Helvetica, sans-serif;
-
-        a {
-          background-color: $g1;
-          margin: 0;
-          padding: 19px 15px;
-          border-top: 5px solid #40444b;
-          border-bottom: 5px solid $bcc_red;
-          display: block;
-          color: white;
-
-          &.selected, &.selected:hover {
-            background-color: white;
-            border-top-color: $bcc_red;
-            border-bottom-color: white;
-            color: black;
-          }
-
-          &:hover {
-            background-color: #40444b;
-            border-bottom-color: #40444b;
-            text-decoration: none;
-          }
-        }
-      }
-    }
   }
 }
 
