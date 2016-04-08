@@ -22,7 +22,6 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage, body.authpage {
     height: 111px;
     line-height: 111px;
     font-size: 30px;
-    font-weight: bold;
     // Getting rid of absolute positioning allows us to style the BCC nav below nicely
     position: static;
   }
@@ -195,4 +194,9 @@ body.mappage {
     border-left: none;
     padding-left: 0;
   }
+}
+
+// Set the default font colour everywhere
+body, .content {
+  color: $g1;
 }

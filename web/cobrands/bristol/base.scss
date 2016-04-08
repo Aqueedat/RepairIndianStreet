@@ -62,3 +62,8 @@
     }
   }
 }
+
+// Set the default font colour everywhere
+body, .content {
+  color: $g1;
+}
