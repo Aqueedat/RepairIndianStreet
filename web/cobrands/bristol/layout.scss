@@ -62,6 +62,16 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage, body.authpage {
 
   #front-main {
     background-color: white;
+    text-align: left;
+
+    #postcodeForm div {
+      margin: 0;
+    }
+
+    a#geolocate_link {
+      text-decoration: underline;
+      color: $b4;
+    }
   }
 
   .nav-menu {
