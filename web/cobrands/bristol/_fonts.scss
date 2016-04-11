@@ -69,6 +69,20 @@
     font-style: normal;
 }
 
-$heading-font: "Thesans-Bold", "Helvetica Neue", Helvetica, sans-serif;
-$body-font: "Thesans-Semi-Light", "Helvetica Neue", Helvetica, sans-serif;
-$meta-font: "Thesans-Semi-Light", "Helvetica Neue", Helvetica, sans-serif;
+$bold-font-family: "Thesans-Semi-Bold", "Helvetica Neue", Helvetica, sans-serif;
+$normal-font-family: "Thesans-Semi-Light", "Helvetica Neue", Helvetica, sans-serif;
+
+// Use placeholder selectors for fonts because we want the bold font to
+// always be normally-weighted.
+%bold-font {
+  font-family: $bold-font-family;
+  font-weight: normal !important; // !important to ensure it doesn't get overridden, as we can't guarantee placement order in resulting CSS
+}
+%normal-font {
+  font-family: $normal-font-family;
+  font-weight: normal;
+}
+
+$heading-font: $bold-font-family;
+$body-font: $normal-font-family;
+$meta-font: $normal-font-family;
