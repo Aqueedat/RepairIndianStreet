@@ -117,23 +117,47 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage, body.authpage {
 body.mappage {
   // Stop the header being too tall
   #site-header {
-    min-height: 64px;
+    min-height: 79px;
 
     .container {
       min-height: 0;
 
       #site-logo {
-        top: 0.6em;
+        top: 0.75em;
+        line-height: 44px;
       }
     }
   }
 
-  a.report-a-problem-btn {
-    color: white;
+  .nav-menu {
+    a, span {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1em;
+    }
+    a:hover {
+      background: transparent;
+      text-decoration: underline;
+    }
+    a.report-a-problem-btn {
+      color: white;
+      &:hover {
+        background-color: lighten($bcc_red, 5%);
+      };
+    }
   }
 
-  .nav-menu--main span {
-    color: white;
+  // Haven't quite figured out why this can't go on #site-header
+  .nav-wrapper {
+    .nav-wrapper-2 {
+      border-bottom: solid 5px $bcc_red;
+    }
+  }
+
+  .big-green-banner {
+    display: block;
+    background-color: $bcc_red;
+    text-transform: none;
   }
 }
 
