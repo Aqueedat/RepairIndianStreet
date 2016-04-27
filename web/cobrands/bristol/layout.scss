@@ -63,14 +63,28 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage, body.authpage {
   #front-main {
     background-color: white;
     text-align: left;
+    padding-top: 40px;
 
-    #postcodeForm div {
-      margin: 0;
+    #postcodeForm {
+      margin-top: 0;
+
+      div {
+        margin: 0;
+      }
     }
 
     a#geolocate_link {
-      text-decoration: underline;
-      color: $b4;
+      color: $b3;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    h1 + p {
+      font-size: 1.75em;
+      line-height: 1.25em;
+      max-width: 640px;
     }
   }
 
@@ -111,7 +125,9 @@ body.frontpage, body.twothirdswidthpage, body.fullwidthpage, body.authpage {
 
   // Put FAQ side nav at correct vertical position
   .content .sticky-sidebar aside {
-    top: 19em;
+    top: 14.5em;
+    right: 17em;
+    box-shadow: none;
   }
 }
 
