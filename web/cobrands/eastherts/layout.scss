@@ -49,3 +49,22 @@ body.mappage {
     top: 8px;
   }
 }
+
+
+footer ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  &:after {
+    content: "";
+    border-right: solid 1px $eh_dark_grey;
+  }
+  &:last-child:after {
+    border-right: none;
+  }
+
+  a {
+    padding: 0 0.25em;
+  }
+}

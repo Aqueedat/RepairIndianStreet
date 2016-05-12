@@ -5,11 +5,6 @@
 
 @import "../sass/base";
 
-// Hide mySociety logo
-.nav-menu--mysoc {
-  display: none;
-}
-
 #site-header {
   border-top: none;
   background: $eh_blue;
@@ -26,4 +21,33 @@
 
 h1, h2, h3, h4 {
   color: $eh_green;
+}
+
+footer {
+  background-color: $eh_med_grey;
+  background-image: url(img/footer.gif);
+  background-repeat: repeat-x;
+  background-position: top;
+
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+
+  p {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    li {
+      list-style: none;
+
+      a, a:visited, a:hover, a:active {
+        color: $eh_dark_grey;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
