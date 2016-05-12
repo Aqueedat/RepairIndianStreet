@@ -1,0 +1,51 @@
+@import "_colours";
+@import "../sass/layout";
+
+#site-header {
+  // default layout.scss sets this, so we need it here as well as base.scss
+  background: $eh_blue;
+  background-image: url(img/header_mid.jpg);
+  background-repeat: repeat-x;
+}
+
+// Get rid of the top border
+.nav-wrapper .nav-wrapper-2 {
+  border-top: none;
+}
+
+body.frontpage {
+  #site-header {
+    height: 90px;
+  }
+
+  #site-logo {
+    top: -94px;
+    width: 399px;
+    height: 184px;
+    background-image: url(img/toplogo.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: $eh_blue;
+  }
+}
+
+#front-main {
+  background-color: #f6f6f6;
+}
+
+.content, #front-main {
+  color: $eh_dark_grey;
+}
+
+body.mappage {
+  .nav-wrapper .nav-wrapper-2 {
+    background-color: $eh_blue;
+    background-image: url(img/header_mid.jpg);
+    background-repeat: repeat-x;
+    background-position: top;
+  }
+
+  #site-logo {
+    top: 8px;
+  }
+}
