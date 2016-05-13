@@ -14,14 +14,58 @@
 }
 
 body.frontpage {
+  $logo-height: 90px;
+  $nav-height: 36px;
+
   #site-header {
-    height: 90px;
+
+    height: $logo-height + $nav-height;
+
+    .container {
+      height: auto;
+    }
+
+    .container:first-child {
+      height: $logo-height;
+    }
+
+    .header__eh_nav {
+      display: block;
+      background-color: $eh_green;
+      height: $nav-height;
+      border-top: solid 1px lighten($eh_green, 25%);
+      border-bottom: solid 1px darken($eh_green, 25%);
+
+      ul, span {
+        font-size: 1.2em;
+        line-height: $nav-height;
+        color: white;
+      }
+
+      ul {
+        float: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          display: inline;
+          margin: 0;
+          padding: 0 0.25em;
+
+          a {
+            color: white;
+          }
+        }
+      }
+    }
   }
 
   #site-logo {
-    top: -94px;
+    $img-height: 184px;
+    top: $logo-height - $img-height;
     width: 399px;
-    height: 184px;
+    height: $img-height;
     background-image: url(img/toplogo.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
@@ -51,20 +95,23 @@ body.mappage {
 }
 
 
-footer ul li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
+footer ul {
+  margin-bottom: 0.5em;
+  li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 
-  &:after {
-    content: "";
-    border-right: solid 1px $eh_dark_grey;
-  }
-  &:last-child:after {
-    border-right: none;
-  }
+    &:after {
+      content: "";
+      border-right: solid 1px $eh_dark_grey;
+    }
+    &:last-child:after {
+      border-right: none;
+    }
 
-  a {
-    padding: 0 0.25em;
+    a {
+      padding: 0 0.5em 0 0.25em;
+    }
   }
 }

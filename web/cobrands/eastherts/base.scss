@@ -5,6 +5,10 @@
 
 @import "../sass/base";
 
+.header__eh_nav {
+  display: none;
+}
+
 #site-header {
   border-top: none;
   background: $eh_blue;
