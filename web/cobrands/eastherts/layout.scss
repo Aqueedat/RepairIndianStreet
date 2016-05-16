@@ -13,13 +13,14 @@
   border-top: none;
 }
 
-body.frontpage {
+body.fullwidthpage, body.twothirdswidthpage, body.authpage, body.frontpage {
   $logo-height: 90px;
-  $nav-height: 36px;
+  $eh-nav-height: 32px;
+  $fms-nav-height: 43px;
 
   #site-header {
-
-    height: $logo-height + $nav-height;
+    background-color: $base_bg;
+    height: $logo-height + $eh-nav-height + $fms-nav-height;
 
     .container {
       height: auto;
@@ -31,19 +32,21 @@ body.frontpage {
 
     .header__eh_nav {
       display: block;
-      background-color: $eh_green;
-      height: $nav-height;
-      border-top: solid 1px lighten($eh_green, 25%);
-      border-bottom: solid 1px darken($eh_green, 25%);
+      background-color: $eh_dark_green;
+      background-image: url(img/welcome_mid.gif);
+      background-repeat: repeat-x;
+      background-position: 0 0;
+      height: $eh-nav-height;
 
       ul, span {
-        font-size: 1.2em;
-        line-height: $nav-height;
+        font-size: 1.1em;
+        line-height: $eh-nav-height;
         color: white;
       }
 
       ul {
         float: right;
+        text-align: right;
         list-style: none;
         margin: 0;
         padding: 0;
@@ -51,10 +54,11 @@ body.frontpage {
         li {
           display: inline;
           margin: 0;
-          padding: 0 0.25em;
+          padding: 0;
 
           a {
             color: white;
+            padding: 0 0.5em 0 0.6em;
           }
         }
       }
@@ -63,13 +67,30 @@ body.frontpage {
 
   #site-logo {
     $img-height: 184px;
+    $img-width: 399px;
     top: $logo-height - $img-height;
-    width: 399px;
+    width: $img-width;
     height: $img-height;
     background-image: url(img/toplogo.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-color: $eh_blue;
+    background-size: $img-width $img-height;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: $logo-height + $eh-nav-height;
+    height: $fms-nav-height;
+    margin: 0 auto;
+    width: 60em;
+    padding: 0;
+    text-align: center;
+    float: none;
+    li {
+      float: none;
+      display: inline-block;
+    }
   }
 }
 
@@ -79,6 +100,11 @@ body.frontpage {
 
 .content, #front-main {
   color: $eh_dark_grey;
+}
+
+body.twothirdswidthpage .content .sticky-sidebar aside {
+  top: 11em;
+  box-shadow: none;
 }
 
 body.mappage {
