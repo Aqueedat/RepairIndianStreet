@@ -235,3 +235,17 @@ footer ul {
     }
   }
 }
+
+// Stop the FMS nav being too wide and off to the right off the page
+// at this break point.
+@media only screen and (min-width: 48em) and (max-width: 61em) {
+  #main-nav {
+    float: $left;
+    padding-#{$left}: 0;
+  }
+  body.fullwidthpage, body.twothirdswidthpage, body.authpage, body.frontpage {
+    .nav-menu {
+      width: 100%;
+    }
+  }
+}
