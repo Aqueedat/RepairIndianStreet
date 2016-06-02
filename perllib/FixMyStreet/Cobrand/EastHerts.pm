@@ -6,7 +6,7 @@ use warnings;
 
 sub council_id { return 2342; }
 sub council_area { return 'East Hertfordshire'; }
-sub council_name { return 'East Hertfordshire district Council'; }
+sub council_name { return 'East Hertfordshire District Council'; }
 sub council_url { return 'eastherts'; }
 
 sub base_url {
